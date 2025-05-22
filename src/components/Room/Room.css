@@ -1,0 +1,162 @@
+/* Estilos para el componente Room */
+.room-barra {
+    position: fixed;
+    bottom: 10%; /* Posicionado en la parte inferior */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150%;
+    max-width: 500px;
+    border-radius: 15px;
+    background-color: rgba(38, 16, 36, 0.9);
+    border: 2px solid #e91e63;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    box-sizing: border-box;
+  }
+  
+  /* Eliminar overflow en el container para quitar la barra de desplazamiento */
+  .container {
+    overflow-y: hidden !important;
+    overflow-x: hidden !important;
+  }
+  
+  .room-title {
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0;
+    text-transform: uppercase;
+    font-family: Poppins, sans-serif;
+    white-space: nowrap;
+  }
+  
+  .room-input {
+    box-sizing: border-box;
+    flex-grow: 1;
+    height: 40px;
+    background: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    padding: 0 15px;
+    margin: 0 10px;
+    font-family: Poppins, sans-serif;
+  }
+  
+  .room-input:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(233, 30, 99, 0.5);
+  }
+  
+  .room-button {
+    min-width: 80px;
+    height: 40px;
+    background: #3f51b5;
+    border-radius: 8px;
+    border: none;
+    color: #fff;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Poppins, sans-serif;
+    padding: 0 15px;
+    text-transform: uppercase;
+  }
+  
+  .room-button:hover {
+    background: #303f9f;
+  }
+  
+  .room-button:active {
+    transform: translateY(1px);
+  }
+  
+  .room-button-text {
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+    text-align: center;
+  }
+  
+  @media (max-width: 767px) {
+    /* Para móviles */
+    .room-barra {
+      top: 10%; /* Mover a la parte superior */
+      bottom: auto; /* Anular bottom */
+    }
+  }
+  
+  @media (max-width: 576px) {
+    /* Para móviles pequeños */
+    .room-barra {
+      width: 95%;
+      padding: 12px 15px;
+      top: 8%; /* Ajuste adicional */
+      bottom: auto;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .room-barra {
+      width: 90vw; /* Se adapta al ancho del viewport */
+      max-width: none;
+      left: 50%;
+      transform: translateX(-50%);
+      top: auto;
+      bottom: 5%; /* o el valor que prefieras */
+      padding: 10px 12px;
+    }
+  
+    .room-input {
+      font-size: 14px;
+      margin: 0 6px;
+    }
+  
+    .room-button {
+      font-size: 14px;
+      padding: 0 10px;
+      min-width: 40px;
+    }
+  
+    .room-title {
+      font-size: 14px;
+    }
+  }
+  @media (max-width: 400px) {
+    .room-barra {
+      width: 90vw; /* Se adapta al ancho del viewport */
+      max-width: none;
+      left: 50%;
+      transform: translateX(-50%);
+      top: auto;
+      bottom: 5%; /* o el valor que prefieras */
+      padding: 8px 10px; /* Reducción de padding */
+    }
+  
+    .room-input {
+      font-size: 12px; /* Reducir tamaño de fuente */
+      margin: 0 4px; /* Reducir margen */
+      min-width: 30px; /* Ajustar ancho mínimo */
+      padding: 0 10px; /* Reducir padding */
+    }
+  
+    .room-button {
+      font-size: 12px; /* Reducir tamaño de fuente */
+      padding: 0 8px; /* Reducir padding */
+      min-width: 30px; /* Ajustar tamaño mínimo */
+    }
+  
+    .room-title {
+      font-size: 12px; /* Reducir tamaño de fuente */
+    }
+  }
+  

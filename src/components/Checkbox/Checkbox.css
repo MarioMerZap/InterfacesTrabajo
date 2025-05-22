@@ -1,0 +1,18 @@
+/* styles/styles_checkbox.css */
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    color: white;
+    font-size: 18px;
+}
+
+.checkbox-input {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+.checkbox-label {
+    font-family: Arial, sans-serif;
+}

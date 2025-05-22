@@ -1,0 +1,181 @@
+
+
+/* ICONOS */
+
+/* Ícono para el botón de dos jugadores (usado internamente en el botón) */
+.iconDosjugadores {
+  width: 60px;
+  height: 45px;
+  background-image: url("../../images/people.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  /* Se usará como parte del contenido del botón, por lo tanto no se posiciona de manera absoluta */
+}
+
+/* Ícono para el botón de un jugador */
+.iconUnjugador {
+  width: 60px;
+  height: 40px;
+  background-image: url("../../images/unJugador.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  /* Se posiciona como parte del botón */
+}
+
+/* Ícono de Información (el logo se aplica de forma normal) */
+.iconInfo {
+  width: 60px;
+  height: 30px;
+  background-image: url("../../images/info.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  /* NOTA: No se define posición aquí para evitar colisiones con los botones */
+}
+
+/* Hover y Active para ícono Info */
+.iconInfo:hover {
+  filter: brightness(1.5) drop-shadow(0 0 15px rgba(255, 255, 255, 0.8));
+  transform: scale(1.1);
+  transition: filter 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.iconInfo:active {
+  transform: scale(1.1);
+  filter: brightness(1.5) drop-shadow(0 0 15px rgba(255, 255, 255, 0.8));
+  transition: none;
+}
+
+/* CONTENEDOR GENERAL */
+.container {
+  width: 100%;
+  height: 100%;
+  position: relative;  /* Permite posicionar elementos hijos absolutamente */
+}
+
+/* CONTENEDOR PARA LOS BOTONES */
+.button-container {
+  position: absolute;
+  top: 380px;  /* Ajusta este valor para ubicar los botones verticalmente */
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-around;  /* Separa el primer botón a la izquierda y el segundo a la derecha */
+  align-items: center;
+  padding: 0 20px;  /* Espaciado lateral */
+}
+
+/* Contenedor extra para el ícono de Info. Se posiciona de forma independiente */
+.info-wrapper {
+  position: absolute;
+  top: 10px;     /* Distancia desde el tope del contenedor principal */
+  right: 5%;     /* Ajusta este valor para moverlo a la derecha */
+  width: 60px;   /* Tamaño inicial; se ajusta en mobile */
+  height: 30px;
+}
+
+/* ESTILOS COMUNES PARA LOS BOTONES */
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;  /* Espacio entre el logo y el texto */
+  width: 400px;
+  height: 115px;
+  border: none;
+  border-radius: var(--border-radius-lg);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.6), 0 6px 6px rgba(0,0,0,0.3), inset 0 -1px 1px rgba(255,255,255,0.1);
+  cursor: pointer;
+  transition: all var(--transition-speed) cubic-bezier(0.2, 0.8, 0.2, 1);
+  position: relative;
+}
+
+/* BOTÓN IZQUIERDO */
+.button-right {
+  background: linear-gradient(135deg, #e63946, #d62836);
+  border-color: rgba(230, 57, 70, 0.3);
+}
+
+/* BOTÓN DERECHO */
+.button-left {
+  background: linear-gradient(135deg, rgba(47,70,220,0.95), rgba(47,70,220,0.95));
+  border-color: rgba(57, 80, 230, 0.3);
+}
+
+/* EFECTOS HOVER */
+.button:hover {
+  transform: translateY(-7px) scale(1.02);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.4), 0 10px 10px rgba(0,0,0,0.5);
+}
+
+.button-right:hover {
+  background: linear-gradient(135deg, #ff4d5a, #e63946);
+}
+
+.button-left:hover {
+  background: linear-gradient(135deg, rgba(67,90,240,0.95), rgba(57,80,230,0.95));
+}
+
+/* EFECTO ACTIVE */
+.button:active {
+  transform: translateY(-2px);
+  transition: transform 0.1s;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+/* TEXTO DE LOS BOTONES */
+.labelStyle {
+  color: #fff;
+  font-size: 35px;
+  font-weight: 600;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  user-select: none;
+  transition: all 0.3s ease;
+}
+
+.button:hover .labelStyle {
+  transform: scale(1.05);
+  text-shadow: 0 0 10px rgba(255,255,255,0.7);
+  letter-spacing: 3.5px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1024px) {
+  .button-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .button {
+    width: 90%;
+    height: 100px;
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .button {
+    height: 80px;
+  }
+  .labelStyle {
+    font-size: 28px;
+  }
+  /* Ajustamos el contenedor del ícono de Info para moverlo más a la derecha */
+  .info-wrapper {
+    top: 10px;
+    right: 10px;   /* Ahora se mueve aún más a la derecha usando píxeles */
+    width: 50px;
+    height: 25px;
+  }
+ 
+}

@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;800&display=swap');
+
+.timer-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    background: linear-gradient(180deg, #1a1a1aeb, #0a0a0a);
+    padding: 15px 25px;
+    border-radius: var(--border-radius-md);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5), 
+                inset 0 1px 0 rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-bottom: 3px solid var(--primary-blue);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    margin: 0;
+    flex: 0 0 auto;
+    max-width: fit-content;
+    animation: subtle-glow 4s ease-in-out infinite;
+}
+/*
+.timer-container + .attempts-counter-container {
+  margin-left: 20px;
+}
+*/
+.timer-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--text-color-light);
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    letter-spacing: 1px;
+    min-width: 120px;
+    text-align: center;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+.timer-controls {
+    display: flex;
+    gap: 12px;
+}
+
+.timer-control-button {
+    background: var(--primary-blue);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition-speed) ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.timer-control-button:hover:not(:disabled) {
+    background: var(--primary-blue);
+    box-shadow: 0 0 15px var(--glow-red);
+    transform: scale(1.1);
+}
+
+.timer-control-button:active:not(:disabled) {
+    transform: scale(0.95);
+}
+
+.timer-control-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background: #666 !important;
+    box-shadow: none !important;
+    transform: none !important;
+}
+
+/* Animación sutil de glow */
+@keyframes subtle-glow {
+    0%, 100% {
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    50% {
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.1), 0 0 20px rgba(255,77,90,0.4);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .timer-container {
+        padding: 10px 15px;
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .timer-text {
+        font-size: 1.2rem;
+        min-width: 100px;
+    }
+    
+    .timer-control-button {
+        width: 36px;
+        height: 36px;
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .timer-container {
+        padding: 10px 15px;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .timer-controls {
+        gap: 15px;
+    }
+}

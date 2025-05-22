@@ -1,0 +1,82 @@
+.scoreboard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    color: white;
+    position: relative;
+    margin-top: 20px;
+}
+
+.player-score {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    text-align: center;
+}
+
+.score {
+    font-size: clamp(3rem, 8vw, 6rem); /* Tamaño flexible entre 3rem y 6rem */
+    font-weight: bold;
+    color: #f0f0f0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+}
+
+.label4 {
+    margin-top: 10px;
+    color: #ccc;
+    letter-spacing: 1px;
+    font-size: clamp(0.8rem, 2vw, 1.2rem); /* Texto adaptable */
+}
+
+/* Turn indicator in the center */
+.turn-indicator {
+    flex: 2;
+    text-align: center;
+    font-size: clamp(1.5rem, 4vw, 2rem); /* Tamaño flexible */
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 12px 24px;
+    border-radius: 12px;
+    color: #00ffcc;
+    box-shadow: 0 0 10px #00ffcc66;
+    text-transform: uppercase;
+    margin: 0 30px;
+}
+
+/* Optional color change depending on player */
+.turn-indicator.player-1 {
+    color: #ffffff;
+    box-shadow: 0 0 10px rgba(252, 252, 252, 0.4);
+}
+.turn-indicator.player-2 {
+    color: rgb(252, 254, 252);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+}
+
+/* Extra ajuste para pantallas muy pequeñas */
+@media (max-width: 360px) {
+    .score {
+        font-size: 2.5rem;
+    }
+    .label4 {
+        font-size: 0.7rem;
+    }
+    .turn-indicator {
+        font-size: 1.2rem;
+        margin: 0 10px;
+        padding: 8px 16px;
+    }
+    .scoreboard {
+        padding: 10px 20px;
+        margin-top: 15px;
+    }
+
+    .attempts-counter-wrapper {
+        display: flex;
+        justify-content: center;
+        margin: 1rem 0;
+    }
+    
+}

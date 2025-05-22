@@ -1,0 +1,79 @@
+/* RESET Y VARIABLES */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+
+input, textarea {
+    user-select: text;
+}
+
+:root {
+  --primary-red: #e63946;
+  --primary-blue: #3950e6f2;
+  --shadow-color: #00000080;
+  --glow-red: #e6394699;
+  --glow-blue: #3950e699;
+  --transition-speed: 0.4s;
+  --border-radius-lg: 25px;
+  --border-radius-md: 15px;
+  --border-radius-sm: 10px;
+}
+
+html, body {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  background: url('./images/tokyo2.jpg') no-repeat center center fixed;
+  background-size: cover;
+  background-color: #000;
+}
+
+
+
+.fixed-header-container {
+  position: fixed; /* Fija el elemento en la ventana */
+  top: 0; /* Empieza desde la parte superior */
+  left: 0; /* Alineado con la parte izquierda */
+  width: 100%; /* Ocupa el ancho completo de la pantalla */
+  z-index: 1000;
+  flex-direction: column;
+  align-items: center;
+}
+
+.game-content {
+  margin-top: 500px;
+}
+
+
+@media (max-width: 768px) {
+  .fixed-header-container {
+    position: relative;
+    padding: 5px 0;
+  }
+  
+  .game-content {
+    margin-top: 20px;
+  }
+  
+  .search-wrapper {
+    width: 95%;
+    margin: 10px auto;
+  }
+  
+  .input-container, #cityInput, #searchButton {
+    height: 40px;
+  }
+}

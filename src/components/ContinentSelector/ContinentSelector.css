@@ -1,0 +1,88 @@
+/* Contenedor principal del selector */
+.continent-selector {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+    width: 100%; /* Asegura que el contenedor ocupe todo el espacio disponible */
+    font-size: 16px
+}
+
+
+/* Dropdown personalizado para que sea más largo */
+.continent-dropdown {
+    width: 100%;
+    display: flex;
+    flex-direction: row; /* Opciones dispuestas en fila horizontal */
+    gap: 20px; /* Espacio entre las opciones */
+    background: rgba(30, 30, 35, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 10px;
+    overflow-x: auto; /* Habilita el scroll horizontal */
+    max-width: 100%; /* Asegura que no supere el ancho del contenedor padre */
+    white-space: nowrap; /* Las opciones estarán en una sola fila */
+    scrollbar-width: thin; /* Estilo para navegadores modernos */
+}
+
+/* Personalizar el scrollbar para scroll horizontal */
+.continent-dropdown::-webkit-scrollbar {
+    height: 8px; /* Altura del scrollbar horizontal */
+}
+.continent-dropdown::-webkit-scrollbar-thumb {
+    background: rgba(0, 235, 255, 0.5);
+    border-radius: 4px;
+}
+.continent-dropdown::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 235, 255, 0.8);
+}
+
+/* Estilo para las opciones individuales */
+.continent-dropdown option {
+    display: inline-block; /* Para que las opciones sean elementos en fila */
+    padding: 8px 16px;
+    background: rgba(40, 40, 45, 0.9);
+    transition: background 0.2s ease, transform 0.2s ease;
+    cursor: pointer;
+}
+
+.continent-dropdown option:hover {
+    background: rgba(12, 12, 15, 0.9);
+    transform: translateY(-2px); /* Efecto sutil al pasar el mouse */
+    color: #00eaff;
+}
+
+/* Asegurar que no se salga del .option-item */
+.option-item {
+    overflow: visible; /* Permite que el contenido del dropdown ocupe espacio necesario */
+    padding: 0;
+    background: none; /* Ajusta para hacer un contenedor más limpio */
+}
+.continent-option {
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 12px;
+    background: rgba(40, 40, 45, 0.8);
+    color: #f0f0f0;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    box-shadow: 0 0 0 transparent;
+    border: 1px solid transparent;
+  }
+  
+  .continent-option:hover {
+    background: rgba(0, 235, 255, 0.1);
+    color: #00eaff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 235, 255, 0.2);
+  }
+  
+  .continent-option.selected {
+    background: rgba(0, 235, 255, 0.15);
+    color: #00eaff;
+    border: 1px solid rgba(0, 235, 255, 0.4);
+    box-shadow: 0 0 10px rgba(0, 235, 255, 0.3);
+  }
