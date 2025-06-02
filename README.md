@@ -1,12 +1,17 @@
-- Grupo J.
+- Grupo Z.
 - Nombre del proyecto: Citydle
 
 - Roles Proyecto:
-  * CEO: Manuel Galán Alfaro manugalan@uma.es
-  * CTO: Ouail Bouazza Mansouri obou523@uma.es
   * CIO: Mario Merino Zapata mariomerzap@uma.es
-  * COO: Pablo Galvez Castillo pablogalcas@uma.es
-  * CXO: Pablo Martínez Palop pablomartinez2506@uma.es
+ 
+- Por problemas con la carpeta .git en la que originalmente se incluyeron recursos importantes para el proyecto, he tenido que subir al github el zip y este readme con la información original del proyecto y la instalación, el motivo de esto es que si tocaba el .git las imágenes y la traducción donde funcionan desaparecía y aunque las imágenes entiendo la lógica tras ellas desconozco el por qué de la traducción, haciendolo así un problema que no he podido solucionar.
+
+- Instrucciones de instalación de este proyecto:
+  1.- Descargar el archivo .zip del github de nombre "ProyectoEntrega.zip"
+  2.- Una vez descargado el archivo .zip descomprimirlo en una carpeta vacía
+  3.- Tras descomprimir el zip y todo su contenido en una carpeta vacía, abrirlo con visual studio code o la aplicación que use para react
+  4.- Tras abrirlo en el terminal de la carpeta principal debe poner "npm install --legacy-peer-deps" para que no se generen incompatibilidades con la versión de react original del proyecto y la traducción
+  5.- Una vez terminado el proceso anterior hacer "npm start" y tras terminar ese proceso debería iniciarse en tu navegador, si no se iniciará en localhost:3000
 
 - El juego se basa en adivinar la ciudad en función de los siguientes parámetros:
   * Continente
